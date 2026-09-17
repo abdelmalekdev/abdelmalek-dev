@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="0f172a">
+    <link rel="icon" type="image/x-icon" href="icons/webicon.ico">
+    <!--Fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <!--Tailwind css library-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Abdelmalek Dev</title>
+</head>
+<body class="grid-bg-masked relative min-h-screen text-slate-100 flex flex-col items-center justify-between p-4 sm:p-6 font-sans antialiased overflow-x-hidden">
+
+    <main class="w-full max-w-md my-auto flex flex-col items-center gap-6 p-6">
+
+        <div class="flex flex-col items-center text-center gap-3">
+            <div class="relative group">
+                <div class="w-24 h-24 rounded-full border-2 border-[var(--color-g-btw)]/40 p-1 bg-black/40 backdrop-blur-md shadow-xl transition-all duration-300 group-hover:border-[var(--color-g-btw)]">
+                    <img src="img/abdelmalek.svg" alt="Abdelmalek" class="w-full h-full rounded-full object-cover">
+                </div>
+
+                <span class="absolute bottom-1 right-1 flex h-3.5 w-3.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-slate-900"></span>
+                </span>
+            </div>
+
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white flex items-center justify-center gap-2">
+                    Abdelmalek Dev
+                </h1>
+                <p class="text-xs text-slate-400 mt-1 max-w-xs">Information Systems Student & Web Developer</p>
+            </div>
+        </div>
+
+        <div class="w-full flex flex-col gap-3.5">
+
+            <a href="index.html"
+               class="group relative w-full p-4 rounded-2xl bg-black/30 border border-white/10 backdrop-blur-md flex items-center justify-between transition-all duration-200 hover:border-[var(--color-g-btw)]/60 hover:bg-black/50 hover:scale-[1.02] hover:shadow-lg">
+                <div class="flex items-center gap-3.5">
+                    <div class="p-2.5 rounded-xl bg-white/5 text-[var(--color-g-2)] transition-colors group-hover:bg-[var(--color-g-2)]/20">
+                        <i class="fa-solid fa-globe text-lg"></i>
+                    </div>
+                    <div class="text-right sm:text-left">
+                        <h2 class="text-sm font-semibold text-white group-hover:text-[var(--color-g-btw)] transition-colors">Main Portfolio</h2>
+                        <p class="text-[11px] text-slate-400">Explore my projects</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"></i>
+            </a>
+
+            <a href="https://github.com/abdelmalekdev" 
+               class="group relative w-full p-4 rounded-2xl bg-black/30 border border-white/10 backdrop-blur-md flex items-center justify-between transition-all duration-200 hover:border-[var(--color-g-btw)]/60 hover:bg-black/50 hover:scale-[1.02] hover:shadow-lg">
+                <div class="flex items-center gap-3.5">
+                    <div class="p-2.5 rounded-xl bg-white/5 text-slate-200 transition-colors group-hover:bg-white/10">
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-semibold text-white group-hover:text-[var(--color-g-btw)] transition-colors">GitHub Profile</h2>
+                        <p class="text-[11px] text-slate-400">Check out my repositories & source code</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/abdelmalek-moghrani-25543335a/"
+               class="group relative w-full p-4 rounded-2xl bg-black/30 border border-white/10 backdrop-blur-md flex items-center justify-between transition-all duration-200 hover:border-[var(--color-g-btw)]/60 hover:bg-black/50 hover:scale-[1.02] hover:shadow-lg">
+                <div class="flex items-center gap-3.5">
+                    <div class="p-2.5 rounded-xl bg-white/5 text-sky-400 transition-colors group-hover:bg-sky-400/20">
+                        <i class="fa-brands fa-linkedin-in text-lg"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-semibold text-white group-hover:text-[var(--color-g-btw)] transition-colors">LinkedIn</h2>
+                        <p class="text-[11px] text-slate-400">Let's connect professionally</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"></i>
+            </a>
+
+            <button id="copy-email" 
+                    class="group relative w-full p-4 rounded-2xl bg-black/30 border border-white/10 backdrop-blur-md flex items-center justify-between transition-all duration-200 hover:border-[var(--color-g-btw)]/60 hover:bg-black/50 hover:scale-[1.02] active:scale-[0.98]">
+                <div class="flex items-center gap-3.5 text-right sm:text-left">
+                    <div class="p-2.5 rounded-xl bg-white/5 text-amber-400 transition-colors group-hover:bg-amber-400/20">
+                        <i class="fa-solid fa-envelope text-lg"></i>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="text-sm font-semibold text-white group-hover:text-[var(--color-g-btw)] transition-colors">Get in Touch</h2>
+                        <p id="copy-email-text" class="text-[11px] text-slate-400">Click to copy email address</p>
+                    </div>
+                </div>
+                <i id="copy-icon" class="fa-regular fa-copy text-xs text-slate-500 group-hover:text-white transition-colors"></i>
+            </button>
+
+        </div>
+
+    </main>
+
+    <footer class="text-center text-xs text-slate-500 py-4 font-mono">
+        © <span id="year"></span> Abdelmalek Dev. Built with Tailwind CSS.
+    </footer>
+
+    <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const copyEmailBtn = document.getElementById('copy-email');
+        const emailSubtext = document.getElementById('copy-email-text');
+        const copyIcon = document.getElementById('copy-icon');
+        const myEmail = "abdelmalekdev@gmail.com"; 
+
+        copyEmailBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(myEmail).then(() => {
+
+                emailSubtext.textContent = "Copied to clipboard! ✓";
+                emailSubtext.classList.add('text-emerald-400');
+                copyIcon.className = "fa-solid fa-check text-xs text-emerald-400";
+
+                setTimeout(() => {
+                    emailSubtext.textContent = "Click to copy email address";
+                    emailSubtext.classList.remove('text-emerald-400');
+                    copyIcon.className = "fa-regular fa-copy text-xs text-slate-500 group-hover:text-white";
+                }, 2000);
+            });
+        });
+    </script>
+
+</body>
+</html>
