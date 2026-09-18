@@ -6,6 +6,7 @@
     --special-font: 'Quicksand' , sans-serif;
 }
 
+/*main variables : fonts , colors . gradients*/
 :root{
     --default-font: 'Outfit' , sans-serif;
     --title-font: 'Montserrat' , sans-serif;
@@ -24,11 +25,13 @@
     box-sizing: border-box;
 }
 
+/* AOS animations scalling problem solution*/
 html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
 
+/* BG design*/
 .grid-bg-masked {
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
@@ -36,6 +39,7 @@ html, body {
   background-size: 100px 100px;
 }
 
+/* Initial state of the body*/
 body{
     margin: 0;
     padding: 0;
@@ -44,6 +48,7 @@ body{
     background-color: var(--bg-color);
 }
 
+/* navbar margin*/
 section{
     scroll-margin-top: 70px;
 }

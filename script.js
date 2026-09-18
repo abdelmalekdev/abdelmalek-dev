@@ -35,7 +35,7 @@ function burgerMenucloseBylink(){
 const navbar = document.getElementById("navbar");
 const upButton = document.getElementById("up-button");
 
-const stickyClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-xl" , "fixed"];
+const stickyClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-xl" , "fixed" , "border-b"];
 const initialClasses = ["absolute"];
 const stickyburgerClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-xl"];
 
@@ -47,6 +47,7 @@ window.addEventListener("scroll", function(){
         navbar.classList.remove(...initialClasses);
         burgerMenu.classList.remove(...stickyburgerClasses);
 
+        //upButton
         upButton.classList.add("opacity-100");
         upButton.classList.add("opacity-0");
         upButton.classList.remove("pointer-events-none");
@@ -56,6 +57,7 @@ window.addEventListener("scroll", function(){
         navbar.classList.add(...initialClasses);
         burgerMenu.classList.add(...stickyburgerClasses);
 
+        //upButton
         upButton.classList.add("opacity-0");
         upButton.classList.remove("opacity-100");
         upButton.classList.add("pointer-events-none");
@@ -74,6 +76,7 @@ const itemWidth = carouselItems[0].clientWidth + gap;
 
 let currentIndex = 0;
 
+//Buttons
 prevButton.addEventListener("click", function(){
     carousel.scrollBy({
         left: -itemWidth,
@@ -88,6 +91,7 @@ nextButton.addEventListener("click", function(){
      currentIndex++;
 })
 
+//carousel scroll effect
 function updateButtonsState() {
     const scrollLeft = carousel.scrollLeft;
     const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
@@ -117,6 +121,7 @@ function isElementInViewport(el) {
     )
 }
 
+//detecting the footer
 window.addEventListener("scroll", () => {
     if (isElementInViewport(footer)) {
         upButton.classList.add("md:bottom-30")
