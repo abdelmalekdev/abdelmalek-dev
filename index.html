@@ -41,7 +41,7 @@
 
             <a href="#contact" 
             class="text-xl py-2 px-6 bg-[var(--color-g-btw)] rounded-2xl max-lg:hidden border border-white/10
-                    transition-all duration-200 hover:bg-[var(--color-g-1)] hover:transform-[scale(1.05)]">Contact Me</a>
+                    transition-all duration-200 hover:bg-[var(--color-g-1)] hover:transform-[scale(1.05)] ">Contact Me</a>
 
             <!--Burger menu-->  
             <button id="burger-button" 
@@ -88,13 +88,16 @@
                             transition-all duration-300 hover:bg-[var(--color-g-1)] hover:transform-[scale(1.05)] hover:shadow-[0_0_20px_var(--color-g-1)] active:shadow-[0_0_20px_var(--color-g-1)] active:bg-[var(--color-g-1)] active:transform-[scale(1.05)] ">Check my projects</a>
 
                     <!--Social media icon links-->
-                    <div id="social-icons" class="grid grid-cols-2 md:ml-5 gap-6 mx-auto">
+                    <div id="social-icons" class="grid grid-cols-3 md:ml-5 gap-6 mx-auto">
                         <a href="https://github.com/Abdelmalekdev" 
                         class="flex justify-center items-center w-11 h-11 sm:w-13 sm:h-13 text-xl rounded-full border border-[var(--color-g-btw)] backdrop-blur-sm
                                 transition-all duration-300 hover:text-[var(--color-g-btw)] hover:shadow-[0_0_15px_var(--color-g-btw)]  "><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/abdelmalek-moghrani-25543335a/" 
                         class="flex justify-center items-center w-11 h-11 sm:w-13 sm:h-13 text-xl rounded-full border border-[var(--color-g-btw)] backdrop-blur-sm
                                 transition-all duration-300 hover:text-[var(--color-g-btw)] hover:shadow-[0_0_15px_var(--color-g-btw)]  "><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/abdelmalek_dev/" 
+                        class="flex justify-center items-center w-11 h-11 sm:w-13 sm:h-13 text-xl rounded-full border border-[var(--color-g-btw)] backdrop-blur-sm
+                                transition-all duration-300 hover:text-[var(--color-g-btw)] hover:shadow-[0_0_15px_var(--color-g-btw)]  "><i class="fa-brands fa-instagram"></i></a>
                     </div>
 
                 </div>
@@ -667,7 +670,7 @@
                         <!-- Email -->
                         <button id="copy-email"
                             class="flex-1 min-w-[180px] p-3 rounded-xl bg-[var(--bg-color)] border border-white/5 flex items-center justify-between group cursor-pointer
-                                    transition-all duration-200 hover:border-[var(--color-g-btw)]/40 hover:bg-[var(--color-g-1)]
+                                    transition-all duration-200 hover:border-[var(--color-g-btw)]/60 hover:bg-[var(--color-g-1)] hover:border-2
                                     active:border-[var(--color-g-btw)]/40 active:bg-[var(--color-g-1)] ">
                             <div class="flex items-center gap-2.5">
                                 <i class="fa-solid fa-envelope text-slate-300 text-sm"></i>
@@ -677,7 +680,7 @@
                         <!-- Github Account-->
                         <a href="https://github.com/Abdelmalekdev" 
                             class="p-3 rounded-xl bg-[var(--bg-color)] border border-white/10 flex items-center gap-2 text-slate-300
-                                    transition-all duration-200 hover:border-[var(--color-g-btw)]/40 hover:bg-[var(--color-g-1)] hover:scale-105 hover:text-white 
+                                    transition-all duration-200 hover:border-2 hover:border-[var(--color-g-btw)]/60 hover:bg-[var(--color-g-1)] hover:scale-105 hover:text-white 
                                     active:border-[var(--color-g-btw)]/40 active:bg-[var(--color-g-1)] active:scale-105 active:text-white ">
                             <i class="fa-brands fa-github text-sm"></i>
                             <span class="text-xs">GitHub</span>
@@ -732,7 +735,7 @@
                 <!-- Submit Button -->
                 <button type="submit" 
                     class="font-medium text-lg col-span-2 rounded-xl py-1 px-2 bg-[var(--color-g-btw)] border border-white/10 cursor-pointer
-                            transition-all duration-200 hover:bg-[var(--color-g-1)] hover:scale-105 
+                            transition-all duration-200 hover:bg-[var(--color-g-1)] hover:scale-105
                             active:bg-[var(--color-g-1)] active:scale-105">
                     Send Message
                 </button>
@@ -765,11 +768,14 @@
 
         <!-- Quick Links -->
         <div class="flex items-center gap-5 text-slate-300">
-            <a href="https://github.com/Abdelmalekdev" target="_blank" aria-label="GitHub" class="hover:text-[var(--color-g-btw)] transition-colors duration-200 p-1">
+            <a href="https://github.com/Abdelmalekdev" class="hover:text-[var(--color-g-btw)] transition-colors duration-200 p-1">
                 <i class="fa-brands fa-github text-lg"></i>
             </a>
-            <a href="https://www.linkedin.com/in/abdelmalek-moghrani-25543335a/" target="_blank" aria-label="LinkedIn" class="hover:text-[var(--color-g-btw)] transition-colors duration-200 p-1">
+            <a href="https://www.linkedin.com/in/abdelmalek-moghrani-25543335a/" class="hover:text-[var(--color-g-btw)] transition-colors duration-200 p-1">
                 <i class="fa-brands fa-linkedin text-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/abdelmalek_dev/" class="hover:text-[var(--color-g-btw)] transition-colors duration-200 p-1">
+                <i class="fa-brands fa-instagram text-lg"></i>
             </a>
             
             <div class="w-px h-4 bg-white/10"></div>
@@ -777,7 +783,7 @@
             <!-- Linktree -->
             <a href="linktree.html" 
                 class="border border-white/10 bg-[var(--bg-color)] rounded-md p-2
-                transition-all duration-200 hover:bg-[var(--color-g-1)] active:bg-[var(--color-g-1)]"><i class="fa-solid fa-share-nodes"></i></a>
+                transition-all duration-200 hover:bg-[var(--color-g-1)] hover:border-[var(--color-g-btw)]/60 active:bg-[var(--color-g-1)]"><i class="fa-solid fa-share-nodes"></i></a>
 
         </div>
 
