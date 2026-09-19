@@ -144,7 +144,7 @@ copyEmailButton.addEventListener("click", () => {
 
         copyEmialButtonText.innerText = "Copied! ✓";
         setTimeout(() => {
-            copyEmialButtonText.innerText = "abdelmalekdev@gmail.com";
+            copyEmialButtonText.innerText = "Email";
         }, 2000);
 
     });
