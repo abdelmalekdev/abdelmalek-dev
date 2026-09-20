@@ -36,7 +36,7 @@ html, body {
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 100px 100px;
+  background-size: 70px 70px;
 }
 
 /* Initial state of the body*/
