@@ -43,5 +43,3 @@ Feel free to explore the live website, view my recent work, or reach out for col
 ---
 
 *Thank you for visiting! Created with passion, purpose, and code by **Abdelmalek M**.*
-
-```
