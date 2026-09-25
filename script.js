@@ -7,16 +7,30 @@ const burgerButton = document.getElementById("burger-button");
 const burgerMenu = document.getElementById("burger-menu");
 const burgerNavLink = burgerMenu.children ;
 
+let burgerDisplay = false;
+
 burgerButton.addEventListener("click", function (){
     if (burgerMenu.classList.contains("hidden")){
         burgerMenu.classList.remove("hidden");
         burgerButton.classList.remove("text-[var(--color-g-btw)]");
         burgerButton.classList.add("text-white");
+        
+        //Change burger menu background whene the navbar is fixed
+        navbar.classList.add(...stickyClasses);
+        navbar.classList.remove(...initialClasses);
+        burgerDisplay = true;
     }
     else{
         burgerMenu.classList.add("hidden");
         burgerButton.classList.remove("text-white");
         burgerButton.classList.add("text-[var(--color-g-btw)]");
+        
+        //remove burger menu background whene the navbar is in the top of the page
+        if (fixednav === true){
+            navbar.classList.remove(...stickyClasses);
+            navbar.classList.add(...initialClasses);
+        }
+        burgerDisplay = false;
     }
 })
 
@@ -27,7 +41,8 @@ for (let i = 0 ; i< burgerNavLink.length ; i++){
 function burgerMenucloseBylink(){
     burgerMenu.classList.add("hidden");
     burgerButton.classList.remove("text-white");
-        burgerButton.classList.add("text-[var(--color-g-btw)]");
+    burgerButton.classList.add("text-[var(--color-g-btw)]");
+    burgerDisplay = false;
 }
 
 //STICKY NAVBAR + SCROLL UP BUTTON
@@ -35,9 +50,10 @@ function burgerMenucloseBylink(){
 const navbar = document.getElementById("navbar");
 const upButton = document.getElementById("up-button");
 
-const stickyClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-xl" , "fixed" , "border-b"];
-const initialClasses = ["absolute"];
-const stickyburgerClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-xl"];
+const stickyClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-2xl" , "fixed" , "border-white/10"];
+const initialClasses = ["absolute" , "border-white/0"];
+
+let fixednav = true;//navbar
 
 window.addEventListener("scroll", function(){
     let scrollPosition = window.scrollY;
@@ -45,22 +61,23 @@ window.addEventListener("scroll", function(){
     if(scrollPosition > 50){
         navbar.classList.add(...stickyClasses);
         navbar.classList.remove(...initialClasses);
-        burgerMenu.classList.remove(...stickyburgerClasses);
 
         //upButton
         upButton.classList.add("opacity-100");
         upButton.classList.add("opacity-0");
         upButton.classList.remove("pointer-events-none");
+        fixednav = false;
     }
-    else if(window.scrollY === 0){
+    else if(scrollPosition === 0){
+        if (burgerDisplay === false){
         navbar.classList.remove(...stickyClasses);
         navbar.classList.add(...initialClasses);
-        burgerMenu.classList.add(...stickyburgerClasses);
+        }
 
         //upButton
         upButton.classList.add("opacity-0");
         upButton.classList.remove("opacity-100");
-        upButton.classList.add("pointer-events-none");
+        fixednav = true;
 
     }
 })
