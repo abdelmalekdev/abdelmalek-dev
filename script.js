@@ -13,7 +13,7 @@ let burgerDisplay = false;
 burgerButton.addEventListener("click", function (){
     if (burgerMenu.classList.contains("hidden")){
         burgerMenu.classList.remove("hidden");
-        //btn color
+        //Btn color
         burgerButton.classList.remove("text-[var(--color-g-btw)]");
         burgerButton.classList.add("text-white");
 
@@ -25,12 +25,12 @@ burgerButton.addEventListener("click", function (){
     }
     else{
         burgerMenu.classList.add("hidden");
-        //btn color
+        //Btn color
         burgerButton.classList.remove("text-white");
         burgerButton.classList.add("text-[var(--color-g-btw)]");
 
         bodyBurgerClosingBtn.classList.add("hidden");
-        //remove burger menu background whene the navbar is in the top of the page
+        //Remove burger menu background whene the navbar is in the top of the page
         if (fixednav === true){
             navbar.classList.remove(...stickyClasses);
             navbar.classList.add(...initialClasses);
@@ -39,7 +39,7 @@ burgerButton.addEventListener("click", function (){
     }
 })
 
-// Burger menu closing
+//Burger menu closing
 
 for (let i = 0 ; i< burgerNavLink.length ; i++){
     burgerNavLink[i].addEventListener("click", burgerMenuclose);
@@ -71,7 +71,7 @@ const upButton = document.getElementById("up-button");
 const stickyClasses = ["bg-[var(--bg-color)]/80" , "backdrop-blur-sm" , "shadow-2xl" , "fixed" , "border-white/10"];
 const initialClasses = ["absolute" , "border-white/0"];
 
-let fixednav = true;//navbar
+let fixednav = true;//Navbar
 
 window.addEventListener("scroll", function(){
     let scrollPosition = window.scrollY;
@@ -80,7 +80,7 @@ window.addEventListener("scroll", function(){
         navbar.classList.add(...stickyClasses);
         navbar.classList.remove(...initialClasses);
 
-        //upButton
+        //UpButton
         upButton.classList.add("opacity-100");
         upButton.classList.add("opacity-0");
         upButton.classList.remove("pointer-events-none");
@@ -92,7 +92,7 @@ window.addEventListener("scroll", function(){
         navbar.classList.add(...initialClasses);
         }
 
-        //upButton
+        //UpButton
         upButton.classList.add("opacity-0");
         upButton.classList.remove("opacity-100");
         fixednav = true;
@@ -101,6 +101,7 @@ window.addEventListener("scroll", function(){
 })
 
 //CAROUSEL
+
 const carousel = document.getElementById("carousel-container");
 const carouselItems = carousel.children;
 const prevButton = document.getElementById("prev-btn");
@@ -126,7 +127,7 @@ nextButton.addEventListener("click", function(){
      currentIndex++;
 })
 
-//carousel scroll effect
+//Carousel scroll effect
 function updateButtonsState() {
     const scrollLeft = carousel.scrollLeft;
     const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
@@ -140,8 +141,11 @@ function updateButtonsState() {
     nextButton.classList.toggle("cursor-not-allowed", nextButton.disabled);
 }
 
+//Button update state
 carousel.addEventListener("scroll", updateButtonsState);
-updateButtonsState();
+window.addEventListener("resize", updateButtonsState);
+window.addEventListener("load", updateButtonsState);
+document.addEventListener("DOMContentLoaded", updateButtonsState);
 
 //SCROLL UP BUTTON IF FOOTER IS IN VIEWPORT
 
@@ -156,7 +160,7 @@ function isElementInViewport(el) {
     )
 }
 
-//detecting the footer
+//Detecting the footer
 window.addEventListener("scroll", () => {
     if (isElementInViewport(footer)) {
         upButton.classList.add("md:bottom-30")
