@@ -58,3 +58,10 @@ select option {
     color: #ffffff !important;            
 }
 
+[data-aos] {
+    pointer-events: auto !important;
+}
+
+#carousel-container [data-aos] {
+    transition-property: transform, opacity !important;
+}
