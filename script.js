@@ -6,15 +6,18 @@ AOS.init();
 const burgerButton = document.getElementById("burger-button");
 const burgerMenu = document.getElementById("burger-menu");
 const burgerNavLink = burgerMenu.children ;
+const bodyBurgerClosingBtn = document.getElementById("burger-menu-closing-area");
 
 let burgerDisplay = false;
 
 burgerButton.addEventListener("click", function (){
     if (burgerMenu.classList.contains("hidden")){
         burgerMenu.classList.remove("hidden");
+        //btn color
         burgerButton.classList.remove("text-[var(--color-g-btw)]");
         burgerButton.classList.add("text-white");
-        
+
+        bodyBurgerClosingBtn.classList.remove("hidden");
         //Change burger menu background whene the navbar is fixed
         navbar.classList.add(...stickyClasses);
         navbar.classList.remove(...initialClasses);
@@ -22,9 +25,11 @@ burgerButton.addEventListener("click", function (){
     }
     else{
         burgerMenu.classList.add("hidden");
+        //btn color
         burgerButton.classList.remove("text-white");
         burgerButton.classList.add("text-[var(--color-g-btw)]");
-        
+
+        bodyBurgerClosingBtn.classList.add("hidden");
         //remove burger menu background whene the navbar is in the top of the page
         if (fixednav === true){
             navbar.classList.remove(...stickyClasses);
@@ -34,15 +39,28 @@ burgerButton.addEventListener("click", function (){
     }
 })
 
+// Burger menu closing
+
 for (let i = 0 ; i< burgerNavLink.length ; i++){
-    burgerNavLink[i].addEventListener("click", burgerMenucloseBylink);
+    burgerNavLink[i].addEventListener("click", burgerMenuclose);
 }
 
-function burgerMenucloseBylink(){
-    burgerMenu.classList.add("hidden");
-    burgerButton.classList.remove("text-white");
-    burgerButton.classList.add("text-[var(--color-g-btw)]");
-    burgerDisplay = false;
+bodyBurgerClosingBtn.addEventListener("click" , burgerMenuclose)
+
+function burgerMenuclose(){
+    if(burgerDisplay === true){
+        burgerMenu.classList.add("hidden");
+        burgerButton.classList.remove("text-white");
+        burgerButton.classList.add("text-[var(--color-g-btw)]");
+
+        bodyBurgerClosingBtn.classList.add("hidden");
+        burgerDisplay = false;
+
+        if (fixednav === true){
+            navbar.classList.remove(...stickyClasses);
+            navbar.classList.add(...initialClasses);
+        }
+    }
 }
 
 //STICKY NAVBAR + SCROLL UP BUTTON
